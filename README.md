@@ -1,10 +1,3 @@
-This is a [Kobweb](https://github.com/varabyte/kobweb) project bootstrapped with the `app/empty` template.
-
-This template is useful if you already know what you're doing and just want a clean slate. By default, it
-just creates a blank home page (which prints to the console so you can confirm it's working)
-
-If you are still learning, consider instantiating the `app` template (or one of the examples) to see actual,
-working projects.
 
 ## Getting Started
 
@@ -15,7 +8,7 @@ $ cd site
 $ kobweb run
 ```
 
-Open [http://localhost:8080](http://localhost:8080) with your browser to see the result.
+Open [http://localhost:8086](http://localhost:8086) with your browser to see the result.
 
 You can use any editor you want for the project, but we recommend using **IntelliJ IDEA Community Edition** downloaded
 using the [Toolbox App](https://www.jetbrains.com/toolbox-app/).
