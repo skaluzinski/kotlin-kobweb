@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.jetbrains.compose)
     alias(libs.plugins.kobweb.application)
     alias(libs.plugins.kobwebx.markdown)
+    kotlin("plugin.serialization") version "1.9.0"
 }
 
 group = "org.example.empty"
@@ -38,7 +39,7 @@ kotlin {
 
         val jsMain by getting {
             val ktor_version = "2.3.0"
-
+            val serialization_version = "2.3.0"
             dependencies {
 //                ktor
                 implementation("io.ktor:ktor-client-core:$ktor_version")
@@ -48,6 +49,7 @@ kotlin {
                 implementation("io.ktor:ktor-client-js:$ktor_version")
                 implementation("io.ktor:ktor-client-json:$ktor_version")
                 implementation("io.ktor:ktor-client-auth:$ktor_version")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
 
 //                koin
                 implementation("io.insert-koin:koin-core:3.2.0")
