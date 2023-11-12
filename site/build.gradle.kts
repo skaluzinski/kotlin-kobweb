@@ -19,17 +19,39 @@ kobweb {
 }
 
 kotlin {
+    repositories {
+        gradlePluginPortal()
+        jcenter()
+        google()
+        mavenCentral()
+    }
+
     configAsKobwebApplication("empty", includeServer = true)
 
     sourceSets {
         val commonMain by getting {
             dependencies {
                 implementation(compose.runtime)
+
             }
         }
 
         val jsMain by getting {
+            val ktor_version = "2.3.0"
+
             dependencies {
+//                ktor
+                implementation("io.ktor:ktor-client-core:$ktor_version")
+                implementation("io.ktor:ktor-client-js:$ktor_version")
+                implementation("io.ktor:ktor-client-content-negotiation:$ktor_version")
+                implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
+                implementation("io.ktor:ktor-client-js:$ktor_version")
+                implementation("io.ktor:ktor-client-json:$ktor_version")
+                implementation("io.ktor:ktor-client-auth:$ktor_version")
+
+//                koin
+                implementation("io.insert-koin:koin-core:3.2.0")
+
                 implementation(compose.html.core)
                 implementation(libs.kobweb.core)
                 implementation(libs.kobweb.silk)
